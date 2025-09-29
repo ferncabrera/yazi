@@ -44,6 +44,11 @@ on = ["g", "u"]
 run = "plugin duckdb -ui"
 desc = "open with duckdb ui"
 
+[[mgr.prepend_keymap]]
+on = [".", "h"]
+run = "hidden toggle"
+desc = "Toggle the visibility of hidden files"
+
 # [[mgr.prepend_keymap]]
 # on = "+"
 # run = "plugin zoom 1"
@@ -70,7 +75,7 @@ run = "search --via=rg"
 desc = "Search files by content via ripgrep"
 
 [[mgr.prepend_keymap]]
-on = ["g", "r"]
+on = [".", "r"]
 run = "plugin cd-git-root"
 desc = "Go to git repo root"
 
