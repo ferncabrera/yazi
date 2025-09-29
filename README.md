@@ -14,7 +14,8 @@ ya pkg add Shallow-Seek/modif; \
 ya pkg add yazi-rs/plugins:smart-filter; \
 ya pkg add AnirudhG07/plugins-yazi:copy-file-contents; \
 ya pkg add yazi-rs/plugins:zoom; \
-ya pkg add wylie102/duckdb;
+ya pkg add wylie102/duckdb; \
+ya pkg add yazi-rs/plugins:smart-paste;
 
 curl <https://install.duckdb.org> | sh
 AND

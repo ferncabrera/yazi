@@ -58,6 +58,11 @@ use = "wylie102/duckdb"
 rev = "3f8c863"
 hash = "87b9233a74325e95011670ed20bbd0d4"
 
+[[plugin.deps]]
+use = "yazi-rs/plugins:smart-paste"
+rev = "d1c8baa"
+hash = "75fd60b2df7115e0a6ca31a6a804d320"
+
 [[flavor.deps]]
 use = "dangooddd/kanagawa"
 rev = "a0b1d9d"
