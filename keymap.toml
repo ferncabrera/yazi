@@ -95,6 +95,16 @@ for = "unix"
 run = 'shell "$SHELL" --block'
 desc = "Open $SHELL here"
 
+[[mgr.prepend_keymap]]
+on = "<C-n>"
+run = 'arrow next'
+desc = "Next file"
+
+[[mgr.prepend_keymap]]
+on = "<C-p>"
+run = 'arrow prev'
+desc = "Previous file"
+
 keymap = [
   { on = "<Esc>", run = "escape", desc = "Exit visual mode, clear selection, or cancel search" },
   { on = "<C-[>", run = "escape", desc = "Exit visual mode, clear selection, or cancel search" },
