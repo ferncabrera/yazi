@@ -1,10 +1,21 @@
 Need to:
 
-ya pack -a dangooddd/kanagawa
-ya pack -a marcosvnmelo/kanagawa-dragon
-ya pack -a muratoffalex/kanagawa-lotus
-ya pkg add yazi-rs/plugins:git
-ya pkg add yazi-rs/plugins:full-border
-ya pkg add Rolv-Apneseth/starship
-ya pkg add pirafrank/what-size
-ya pkg add mikavilpas/easyjump.yazi:easyjump
+ya pkg add dangooddd/kanagawa; \
+ya pkg add marcosvnmelo/kanagawa-dragon; \
+ya pkg add muratoffalex/kanagawa-lotus; \
+ya pkg add yazi-rs/plugins:git; \
+ya pkg add yazi-rs/plugins:full-border; \
+ya pkg add Rolv-Apneseth/starship; \
+ya pkg add pirafrank/what-size; \
+ya pkg add mikavilpas/easyjump.yazi:easyjump; \
+ya pkg add ciarandg/cd-git-root; \
+ya pkg add ourongxing/fast-enter; \
+ya pkg add Shallow-Seek/modif; \
+ya pkg add yazi-rs/plugins:smart-filter; \
+ya pkg add AnirudhG07/plugins-yazi:copy-file-contents; \
+ya pkg add yazi-rs/plugins:zoom; \
+ya pkg add wylie102/duckdb;
+
+curl <https://install.duckdb.org> | sh
+AND
+add to path - /Users/<USERNAME>/.duckdb/cli/latest

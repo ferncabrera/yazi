@@ -420,6 +420,11 @@ keymap = [
 
 [input]
 
+[[input.prepend_keymap]]
+on = "<Esc>"
+run = "close"
+desc = "Cancel input"
+
 keymap = [
   { on = "<C-c>", run = "close", desc = "Cancel input" },
   { on = "<Enter>", run = "close --submit", desc = "Submit input" },
