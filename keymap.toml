@@ -80,7 +80,7 @@ run = "plugin fast-enter"
 desc = "Enter the subfolder faster, or open the file directly"
 
 [[mgr.prepend_keymap]]
-on = ["b", "m"]
+on = [".", "m"]
 run = "plugin modif 5d"
 desc = "Show files modified in the last 5 days"
 
