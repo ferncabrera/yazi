@@ -105,7 +105,7 @@ desc = "Toggle the visibility of hidden files"
 # desc = "Smart filter"
 #
 [[mgr.prepend_keymap]]
-on = "<A-y>"
+on = [".", "y"]
 run = ["plugin copy-file-contents"]
 desc = "Copy contents of file"
 
