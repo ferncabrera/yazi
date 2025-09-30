@@ -15,7 +15,10 @@ ya pkg add yazi-rs/plugins:smart-filter; \
 ya pkg add AnirudhG07/plugins-yazi:copy-file-contents; \
 ya pkg add yazi-rs/plugins:zoom; \
 ya pkg add wylie102/duckdb; \
-ya pkg add yazi-rs/plugins:smart-paste;
+ya pkg add yazi-rs/plugins:smart-paste; \
+ya pkg add MasouShizuka/close-and-restore-tab; \
+ya pkg add uhs-robert/recycle-bin; \
+ya pkg add MasouShizuka/projects;
 
 curl <https://install.duckdb.org> | sh
 AND
