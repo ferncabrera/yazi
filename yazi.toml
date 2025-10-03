@@ -3,7 +3,7 @@
 "$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
 
 [mgr]
-ratio = [2, 4, 3]
+ratio = [1, 2, 4]
 sort_by = "alphabetical"
 sort_sensitive = false
 sort_reverse = false
@@ -30,7 +30,7 @@ ueberzug_offset = [0, 0, 0, 0]
 
 [opener]
 edit = [
-  { run = '${EDITOR:-vi} "$@"', desc = "$EDITOR", block = true, for = "unix" },
+  { run = 'if [ -d "$1" ]; then prev_dir="$PWD"; ya emit cd "$1"; cd "$1"; AUTO_NVIM_RESTORE=1 ${EDITOR:-nvim} "$@"; cd "$1"; ya emit cd "$prev_dir"; else ${EDITOR:-nvim} "$@"; fi', desc = "$EDITOR", block = true, for = "unix" },
   { run = 'code %*', orphan = true, desc = "code", for = "windows" },
   { run = 'code -w %*', block = true, desc = "code (block)", for = "windows" },
 ]
