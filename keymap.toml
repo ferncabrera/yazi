@@ -99,11 +99,11 @@ desc = "Toggle the visibility of hidden files"
 # run = "plugin zoom -1"
 # desc = "Zoom out hovered file"
 
-# [[mgr.prepend_keymap]]
-# on = "F"
-# run = "plugin smart-filter"
-# desc = "Smart filter"
-#
+[[mgr.prepend_keymap]]
+on = "F"
+run = "plugin smart-filter"
+desc = "Smart filter"
+
 [[mgr.prepend_keymap]]
 on = [".", "y"]
 run = ["plugin copy-file-contents"]
