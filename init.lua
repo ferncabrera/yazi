@@ -69,19 +69,20 @@ require("projects"):setup({
 -- Kanagawa Lotus Palette (your tmux colors mapped)
 local lotus = {
 	white_3 = "#DCD7BA", -- light fg
+	true_white = "#f2ecbc",
 	gray_3 = "#938056", -- muted gray
 	white_2 = "#e7dba0", -- softer fg
 	violet_1 = "#a09cac", -- subtle accent
-	violet_2 = "#d7e3d8", -- stronger accent
+	violet_2 = "#d9a594", -- stronger accent
 	aqua_2 = "#5e857a", -- aqua
-	green_2 = "#4d699b", -- green-ish (lotus twist, actually looks reddish)
+	red_3 = "#4d699b", -- green-ish (lotus twist, actually looks reddish)
 	orange_2 = "#6f894e", -- green/olive
-	red_2 = "#e98a00", -- orange-red
+	yellow_3 = "#e98a00", -- orange-red
 	pink = "#b35b79", -- pink accent
-	yellow_3 = "#5a7785", -- dusty yellow/steel
+	red_2 = "#5a7785", -- dusty yellow/steel
 	bg_dark = "#54546D", -- custom: dark terminal bg
 	bg_light = "#545464", -- custom: lighter section bg
-	red_3 = "#C34043", -- red
+	green_2 = "#C34043", -- red
 }
 
 -- ---@class PaletteColors
@@ -219,14 +220,14 @@ require("yatline"):setup({
 	inverse_separator = { open = "", close = "" },
 
 	style_a = {
-		fg = lotus.white_3,
+		fg = lotus.true_white,
 		bg_mode = {
 			normal = lotus.green_2,
 			select = lotus.red_2,
 			un_set = lotus.bg_light,
 		},
 	},
-	style_b = { bg = lotus.violet_2, fg = lotus.green_2 },
+	style_b = { bg = lotus.violet_2, fg = lotus.true_white },
 	style_c = { bg = lotus.white_2, fg = lotus.bg_light },
 
 	permissions_t_fg = lotus.orange_2,
