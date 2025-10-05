@@ -229,11 +229,11 @@ require("yatline"):setup({
 	style_b = { bg = lotus.violet_2, fg = lotus.green_2 },
 	style_c = { bg = lotus.white_2, fg = lotus.bg_light },
 
-	permissions_t_fg = lotus.aqua_2,
-	permissions_r_fg = lotus.yellow_3,
-	permissions_w_fg = lotus.red_2,
+	permissions_t_fg = lotus.orange_2,
+	permissions_r_fg = lotus.red_2,
+	permissions_w_fg = lotus.red_3,
 	permissions_x_fg = lotus.orange_2,
-	permissions_s_fg = lotus.white_3,
+	permissions_s_fg = lotus.pink,
 
 	tab_width = 20,
 	tab_use_inverse = false,
@@ -273,6 +273,7 @@ require("yatline"):setup({
 			section_a = { { type = "string", custom = false, name = "cursor_position" } },
 			section_b = { { type = "string", custom = false, name = "cursor_percentage" } },
 			section_c = {
+				-- { type = "line", custom = false, name = "tabs", params = { "right" } },
 				{ type = "string", custom = false, name = "hovered_file_extension", params = { true } },
 				{ type = "coloreds", custom = false, name = "permissions" },
 			},

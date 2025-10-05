@@ -165,6 +165,11 @@ on = ["<C-t>"]
 run = "plugin close-and-restore-tab restore"
 desc = "Restore the closed tab"
 
+# [[mgr.prepend_keymap]]
+# on = "t"
+# run = "plugin smart-tab"
+# desc = "Create a tab and enter the hovered directory"
+
 keymap = [
   { on = "<Esc>", run = "escape", desc = "Exit visual mode, clear selection, or cancel search" },
   { on = "<C-[>", run = "escape", desc = "Exit visual mode, clear selection, or cancel search" },
