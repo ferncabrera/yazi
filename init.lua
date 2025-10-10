@@ -224,7 +224,7 @@ require("yatline"):setup({
 		bg_mode = {
 			normal = lotus.green_2,
 			select = lotus.red_2,
-			un_set = lotus.bg_light,
+      un_set = "#938056",
 		},
 	},
 	style_b = { bg = lotus.violet_2, fg = lotus.true_white },
