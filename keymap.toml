@@ -136,7 +136,6 @@ desc = "Show files modified in the last 5 days"
 
 [[mgr.prepend_keymap]]
 on = "!"
-for = "unix"
 run = 'shell "$SHELL" --block'
 desc = "Open $SHELL here"
 
@@ -166,11 +165,14 @@ run = "plugin close-and-restore-tab restore"
 desc = "Restore the closed tab"
 
 [[mgr.prepend_keymap]]
-on = [".", "o"]
-run = 'if [ -d "$1" ]; then prev_dir="$PWD"; ya emit cd "$1"; cd "$1"; AUTO_NVIM_RESTORE=1 ${EDITOR:-nvim} "$@"; cd "$1"; ya emit cd "$prev_dir"; else ${EDITOR:-nvim} "$@"; fi'
+on = [".", "."]
+run = 'shell --block "AUTO_NVIM_RESTORE=1 ${EDITOR:-nvim} ."'
 desc = "Open current directory with $EDITOR"
-block = true
-for = "unix"
+
+[[mgr.prepend_keymap]]
+on = [".", "<Enter>"]
+run = 'shell --block "AUTO_NVIM_RESTORE=1 ${EDITOR:-nvim} ."'
+desc = "Open current directory with $EDITOR"
 
 # [[mgr.prepend_keymap]]
 # on = "t"

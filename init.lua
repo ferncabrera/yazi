@@ -220,11 +220,11 @@ require("yatline"):setup({
 	inverse_separator = { open = "", close = "" },
 
 	style_a = {
-		fg = lotus.true_white,
+		fg = lotus.white_2,
 		bg_mode = {
 			normal = lotus.green_2,
 			select = lotus.red_2,
-      un_set = "#938056",
+			un_set = "#938056",
 		},
 	},
 	style_b = { bg = lotus.violet_2, fg = lotus.true_white },
