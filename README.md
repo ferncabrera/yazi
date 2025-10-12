@@ -19,7 +19,7 @@ ya pkg add yazi-rs/plugins:smart-paste; \
 ya pkg add MasouShizuka/close-and-restore-tab; \
 ya pkg add uhs-robert/recycle-bin; \
 ya pkg add MasouShizuka/projects; \
-ya pack -a imsi32/yatline; \
+ya pkg add imsi32/yatline; \
 ya pkg add Lil-Dank/lazygit;
 
 curl <https://install.duckdb.org> | sh
