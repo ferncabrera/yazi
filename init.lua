@@ -215,7 +215,8 @@ local lotus = {
 -- }
 
 require("yatline"):setup({
-	section_separator = { open = "", close = "" },
+	section_separators = { left = "", right = "" },
+	section_separator = { close = "", open = "" },
 	part_separator = { open = "╱", close = "╲" },
 	inverse_separator = { open = "", close = "" },
 
