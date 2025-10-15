@@ -125,12 +125,12 @@ local wave = {
 	violet_1 = "#938aa9", -- subtle accent
 	violet_2 = "#54546D", -- stronger accent
 	aqua_2 = "#98bb6c", -- aqua
-	red_3 = "#949fb5", -- green-ish (lotus twist, actually looks reddish)
+	red_3 = "#e46876", -- green-ish (lotus twist, actually looks reddish)
 	orange_2 = "#87a987", -- green/olive
 	yellow_3 = "#dca561", -- orange-red
 	pink = "#d9a594", -- pink accent
 	red_2 = "#5a7785", -- dusty yellow/steel
-	bg_dark = "#4d699b", -- custom: dark terminal bg
+	bg_dark = "#7e9cd8", -- custom: dark terminal bg
 	bg_light = "#dcd7ba", -- custom: lighter section bg
 	green_2 = "#938aa9", -- red
 }
