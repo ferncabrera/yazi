@@ -136,7 +136,7 @@ local wave = {
 }
 
 if detect_dark_mode() then
-	theme = dragon
+	-- theme = dragon
 	theme = wave
 else
 	theme = lotus
