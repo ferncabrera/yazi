@@ -82,27 +82,27 @@ local theme
 
 -- Kanagawa Lotus Palette (your tmux colors mapped)
 local lotus = {
-	white_3 = "#DCD7BA", -- light fg
 	true_white = "#f2ecbc",
 	gray_3 = "#938056", -- muted gray
-	white_2 = "#e7dba0", -- softer fg
+	main_bg = "#938056", -- muted gray
+	white_2 = "#f2ecbc", -- softer fg
 	violet_1 = "#a09cac", -- subtle accent
 	violet_2 = "#d9a594", -- stronger accent
-	aqua_2 = "#5e857a", -- aqua
-	red_3 = "#4d699b", -- green-ish (lotus twist, actually looks reddish)
-	orange_2 = "#6f894e", -- green/olive
-	yellow_3 = "#e98a00", -- orange-red
-	pink = "#b35b79", -- pink accent
-	red_2 = "#5a7785", -- dusty yellow/steel
-	bg_dark = "#54546D", -- custom: dark terminal bg
-	bg_light = "#545464", -- custom: lighter section bg
-	green_2 = "#C34043", -- red
+	aqua_2 = "#98bb6c", -- aqua
+	red_3 = "#c84053", -- green-ish (lotus twist, actually looks reddish)
+	orange_2 = "#98bb6c", -- green/olive
+	yellow_3 = "#de9800", -- orange-red
+	pink = "#f2ecbc", -- pink accent
+	red_2 = "#de9800", -- dusty yellow/steel
+	bg_dark = "#c7d7e0", -- custom: dark terminal bg
+	bg_light = "#f2ecbc", -- custom: lighter section bg
+	green_2 = "#d7474b", -- red
 }
 
 local dragon = {
-	white_3 = "#DCD7BA", -- light fg
 	true_white = "#181616",
 	gray_3 = "#181616", -- muted gray
+	main_bg = "#393836", -- muted gray
 	white_2 = "#393836", -- softer fg
 	violet_1 = "#938aa9", -- subtle accent
 	violet_2 = "#b6927b", -- stronger accent
@@ -118,9 +118,9 @@ local dragon = {
 }
 
 local wave = {
-	white_3 = "#DCD7BA", -- light fg
 	true_white = "#dcd7ba",
 	gray_3 = "#181616", -- muted gray
+	main_bg = "#2a2a37", -- muted gray
 	white_2 = "#2a2a37", -- softer fg
 	violet_1 = "#938aa9", -- subtle accent
 	violet_2 = "#54546D", -- stronger accent
@@ -130,7 +130,7 @@ local wave = {
 	yellow_3 = "#dca561", -- orange-red
 	pink = "#d9a594", -- pink accent
 	red_2 = "#5a7785", -- dusty yellow/steel
-	bg_dark = "#54546D", -- custom: dark terminal bg
+	bg_dark = "#4d699b", -- custom: dark terminal bg
 	bg_light = "#dcd7ba", -- custom: lighter section bg
 	green_2 = "#938aa9", -- red
 }
@@ -376,9 +376,9 @@ require("yatline"):setup({
 		},
 	},
 	style_b = { bg = theme.violet_2, fg = theme.true_white },
-	style_c = { bg = theme.white_2, fg = theme.bg_light },
+	style_c = { bg = theme.main_bg, fg = theme.bg_light },
 
-	permissions_t_fg = theme.orange_2,
+	permissions_t_fg = theme.bg_dark,
 	permissions_r_fg = theme.red_2,
 	permissions_w_fg = theme.red_3,
 	permissions_x_fg = theme.orange_2,
