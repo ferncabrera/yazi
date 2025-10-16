@@ -107,11 +107,11 @@ local dragon = {
 	violet_1 = "#938aa9", -- subtle accent
 	violet_2 = "#b6927b", -- stronger accent
 	aqua_2 = "#87a987", -- aqua
-	red_3 = "#949fb5", -- green-ish (lotus twist, actually looks reddish)
+	red_3 = "#e46876", -- green-ish (lotus twist, actually looks reddish)
 	orange_2 = "#8a9a7b", -- green/olive
-	yellow_3 = "#5e857a", -- orange-red
+	yellow_3 = "#c4b28a", -- orange-red
 	pink = "#b98d7b", -- pink accent
-	red_2 = "#5a7785", -- dusty yellow/steel
+	red_2 = "#8ea4a2", -- dusty yellow/steel
 	bg_dark = "#54546D", -- custom: dark terminal bg
 	bg_light = "#f2ecbc", -- custom: lighter section bg
 	green_2 = "#8ea4a2", -- red
@@ -136,8 +136,8 @@ local wave = {
 }
 
 if detect_dark_mode() then
-	-- theme = dragon
-	theme = wave
+	theme = dragon
+	-- theme = wave
 else
 	theme = lotus
 end
