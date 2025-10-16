@@ -129,15 +129,15 @@ local wave = {
 	orange_2 = "#87a987", -- green/olive
 	yellow_3 = "#dca561", -- orange-red
 	pink = "#d9a594", -- pink accent
-	red_2 = "#5a7785", -- dusty yellow/steel
+	red_2 = "#dca561", -- dusty yellow/steel
 	bg_dark = "#7e9cd8", -- custom: dark terminal bg
 	bg_light = "#dcd7ba", -- custom: lighter section bg
 	green_2 = "#938aa9", -- red
 }
 
 if detect_dark_mode() then
-	theme = dragon
-	-- theme = wave
+	-- theme = dragon
+	theme = wave
 else
 	theme = lotus
 end
