@@ -1,7 +1,7 @@
 require("git"):setup()
-require("full-border"):setup({
-	type = ui.Border.PLAIN,
-})
+-- require("full-border"):setup({
+-- 	type = ui.Border.PLAIN,
+-- })
 require("starship"):setup({
 	-- Hide flags (such as filter, find and search). This is recommended for starship themes which
 	-- are intended to go across the entire width of the terminal.
