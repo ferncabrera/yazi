@@ -20,6 +20,7 @@ ya pkg add MasouShizuka/close-and-restore-tab; \
 ya pkg add uhs-robert/recycle-bin; \
 ya pkg add MasouShizuka/projects; \
 ya pkg add imsi32/yatline; \
+ya pkg add yazi-rs/plugins:no-status \
 ya pkg add Lil-Dank/lazygit;
 
 curl <https://install.duckdb.org> | sh

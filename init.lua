@@ -1,4 +1,18 @@
+th.git = th.git or {}
+th.git.modified = ui.Style():fg("#7fb4ca"):bold()
+th.git.modified_sign = "M"
+th.git.deleted = ui.Style():fg("#d7474b"):bold()
+th.git.deleted_sign = "D"
+th.git.untracked = ui.Style():fg("#98bb2a"):bold()
+th.git.untracked_sign = "U"
+th.git.added = ui.Style():fg("#6f894e"):bold()
+th.git.added_sign = "A"
+th.git.updated = ui.Style():fg("#4d699b")
+th.git.updated_sign = "U!"
+th.git.ignored = ui.Style():fg("#737c73")
+th.git.ignored_sign = "i"
 require("git"):setup()
+
 -- require("full-border"):setup({
 -- 	type = ui.Border.PLAIN,
 -- })
@@ -79,6 +93,8 @@ local function detect_dark_mode()
 		return false
 	end
 end
+
+require("no-status"):setup()
 
 local theme
 
@@ -363,74 +379,74 @@ end
 -- lotus_teal_1='#4e8ca2'
 -- lotus_teal_3='#5a7785'
 
-require("yatline"):setup({
-	section_separators = { left = "", right = "" },
-	section_separator = { close = "", open = "" },
-	part_separator = { open = "╱", close = "╲" },
-	inverse_separator = { open = "", close = "" },
-
-	style_a = {
-		fg = theme.white_2,
-		bg_mode = {
-			normal = theme.green_2,
-			select = theme.red_2,
-			un_set = theme.gray_3,
-		},
-	},
-	style_b = { bg = theme.violet_2, fg = theme.true_white },
-	style_c = { bg = theme.main_bg, fg = theme.bg_light },
-
-	permissions_t_fg = theme.bg_dark,
-	permissions_r_fg = theme.red_2,
-	permissions_w_fg = theme.red_3,
-	permissions_x_fg = theme.orange_2,
-	permissions_s_fg = theme.pink,
-
-	tab_width = 20,
-	tab_use_inverse = false,
-
-	selected = { icon = "󰻭", fg = theme.yellow_3 },
-	copied = { icon = "", fg = theme.aqua_2 },
-	cut = { icon = "", fg = theme.red_3 },
-
-	total = { icon = "󰮍", fg = theme.yellow_3 },
-	succ = { icon = "", fg = theme.aqua_2 },
-	fail = { icon = "", fg = theme.red_2 },
-	found = { icon = "󰮕", fg = theme.violet_1 },
-	processed = { icon = "󰐍", fg = theme.green_2 },
-
-	show_background = true,
-
-	display_header_line = true,
-	display_status_line = true,
-
-	component_positions = { "header", "tab", "status" },
-
-	header_line = {
-		left = { section_a = {}, section_b = {}, section_c = {} },
-		right = { section_a = {}, section_b = {}, section_c = {} },
-	},
-
-	status_line = {
-		left = {
-			section_a = { { type = "string", custom = false, name = "tab_mode" } },
-			section_b = { { type = "string", custom = false, name = "hovered_size" } },
-			section_c = {
-				{ type = "string", custom = false, name = "hovered_path" },
-				{ type = "coloreds", custom = false, name = "count" },
-			},
-		},
-		right = {
-			section_a = { { type = "string", custom = false, name = "cursor_position" } },
-			section_b = { { type = "string", custom = false, name = "cursor_percentage" } },
-			section_c = {
-				-- { type = "line", custom = false, name = "tabs", params = { "right" } },
-				{ type = "string", custom = false, name = "hovered_file_extension", params = { true } },
-				{ type = "coloreds", custom = false, name = "permissions" },
-			},
-		},
-	},
-})
+-- require("yatline"):setup({
+-- 	section_separators = { left = "", right = "" },
+-- 	section_separator = { close = "", open = "" },
+-- 	part_separator = { open = "╱", close = "╲" },
+-- 	inverse_separator = { open = "", close = "" },
+--
+-- 	style_a = {
+-- 		fg = theme.white_2,
+-- 		bg_mode = {
+-- 			normal = theme.green_2,
+-- 			select = theme.red_2,
+-- 			un_set = theme.gray_3,
+-- 		},
+-- 	},
+-- 	style_b = { bg = theme.violet_2, fg = theme.true_white },
+-- 	style_c = { bg = theme.main_bg, fg = theme.bg_light },
+--
+-- 	permissions_t_fg = theme.bg_dark,
+-- 	permissions_r_fg = theme.red_2,
+-- 	permissions_w_fg = theme.red_3,
+-- 	permissions_x_fg = theme.orange_2,
+-- 	permissions_s_fg = theme.pink,
+--
+-- 	tab_width = 20,
+-- 	tab_use_inverse = false,
+--
+-- 	selected = { icon = "󰻭", fg = theme.yellow_3 },
+-- 	copied = { icon = "", fg = theme.aqua_2 },
+-- 	cut = { icon = "", fg = theme.red_3 },
+--
+-- 	total = { icon = "󰮍", fg = theme.yellow_3 },
+-- 	succ = { icon = "", fg = theme.aqua_2 },
+-- 	fail = { icon = "", fg = theme.red_2 },
+-- 	found = { icon = "󰮕", fg = theme.violet_1 },
+-- 	processed = { icon = "󰐍", fg = theme.green_2 },
+--
+-- 	show_background = true,
+--
+-- 	display_header_line = true,
+-- 	display_status_line = true,
+--
+-- 	component_positions = { "header", "tab", "status" },
+--
+-- 	header_line = {
+-- 		left = { section_a = {}, section_b = {}, section_c = {} },
+-- 		right = { section_a = {}, section_b = {}, section_c = {} },
+-- 	},
+--
+-- 	status_line = {
+-- 		left = {
+-- 			section_a = { { type = "string", custom = false, name = "tab_mode" } },
+-- 			section_b = { { type = "string", custom = false, name = "hovered_size" } },
+-- 			section_c = {
+-- 				{ type = "string", custom = false, name = "hovered_path" },
+-- 				{ type = "coloreds", custom = false, name = "count" },
+-- 			},
+-- 		},
+-- 		right = {
+-- 			section_a = { { type = "string", custom = false, name = "cursor_position" } },
+-- 			section_b = { { type = "string", custom = false, name = "cursor_percentage" } },
+-- 			section_c = {
+-- 				-- { type = "line", custom = false, name = "tabs", params = { "right" } },
+-- 				{ type = "string", custom = false, name = "hovered_file_extension", params = { true } },
+-- 				{ type = "coloreds", custom = false, name = "permissions" },
+-- 			},
+-- 		},
+-- 	},
+-- })
 
 -- Status:children_add(function(self)
 -- 	local h = self._current.hovered
